@@ -9,8 +9,8 @@ import google.generativeai as genai
 from voice_profiles import get_voice, format_salutation, check_taboos
 
 # Ensure your API key is in your environment variables
-# (Automatically picking up the key you used in judge_simulator)
-api_key = os.environ.get("GEMINI_API_KEY", "AIzaSyAMWCDHU0hQ9ySgSv9a83kw6Rz66KpIuvg")
+# Ensure your API key is in your environment variables
+api_key = os.environ.get("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
 
 def compose(category: dict, merchant: dict, trigger: dict, customer: Optional[dict] = None) -> dict:

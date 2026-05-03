@@ -21,13 +21,14 @@ Author: magicpin AI Challenge Team
 # =============================================================================
 
 # Your bot's URL (where your bot is running)
-BOT_URL = "http://localhost:8081"
+BOT_URL = "https://vera-ai-bot-omj8.onrender.com"
 
 # Choose your LLM provider: "openai", "anthropic", "gemini", "deepseek", "groq", "ollama", "openrouter"
 LLM_PROVIDER = "gemini"
 
+import os
 # Your API key (paste your key here)
-LLM_API_KEY = "AIzaSyAMWCDHU0hQ9ySgSv9a83kw6Rz66KpIuvg"  # <-- PUT YOUR API KEY HERE
+LLM_API_KEY = os.environ.get("GEMINI_API_KEY", "")  # <-- DO NOT COMMIT YOUR KEY
 
 # Model to use (leave empty for default, or specify like "gpt-4o", "claude-3-5-sonnet-20241022", etc.)
 LLM_MODEL = "gemini-2.5-flash"  # <-- Optional: specify model or leave empty for default
